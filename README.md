@@ -114,8 +114,6 @@ This project presents a **comparative analysis of advanced option pricing models
 └── requirements.txt
 ```
 
----
-
 ## 🚀 Future Work
 
 1. 📈 Extend models to **multi-asset options** (e.g., basket or rainbow options)
@@ -124,15 +122,10 @@ This project presents a **comparative analysis of advanced option pricing models
 4. 📊 Develop **real-time dashboard** for live option pricing and visualization
 5. 🤖 Incorporate **machine learning** for parameter calibration and volatility forecasting
 
----
 
 ## 🧠 Conclusion
 
 This project provides a **robust framework** for understanding and comparing **advanced option pricing models** using real-world assumptions. It not only captures the theoretical mechanics of Heston and Merton models but also translates them into **practical pricing insights** using Python and Monte Carlo methods.
 
-> 💡 Ideal for financial engineers, quantitative researchers, and practitioners aiming to deepen their understanding of modern derivatives pricing.
 
----
-
-Let me know if you'd like me to export this into a `README.md` file or integrate charts/tables directly from your notebooks!
 
