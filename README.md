@@ -1,101 +1,138 @@
 # -Option-Pricing-Models-Analysis
 
-# README: Option Pricing Models Analysis
+## 📘 Project Overview
 
-## Project Overview
-This project analyzes and compares various option pricing models, including the Heston Stochastic Volatility Model and Merton Jump Diffusion Model, for both European and American options. The work demonstrates advanced financial modeling techniques using Monte Carlo simulations and examines option pricing dynamics under different market conditions.
+This project presents a **comparative analysis of advanced option pricing models**, focusing on the **Heston Stochastic Volatility Model** and the **Merton Jump Diffusion Model**. Both **European and American options** are evaluated using **Monte Carlo simulations**. The work explores how different **market assumptions** (like correlation and jump intensity) impact pricing, Greeks, and moneyness behavior.
 
-## Key Components
+> 📚 Completed as part of a financial modeling curriculum. Designed for research, academic exploration, and practical implementation.
 
-### 1. Model Implementations
+---
 
-**Heston Model (Stochastic Volatility)**
-- Applied to ATM European options with different correlation values (-0.30 and -0.70)
-- Calculated option prices and Greeks (delta, gamma)
-- Verified put-call parity
-- Analyzed moneyness effects (0.85-1.10 range)
+## 🧩 Key Components
 
-**Merton Model (Jump Diffusion)**
-- Priced European options with varying jump intensities (0.25 and 0.75)
-- Computed corresponding Greeks
-- Tested put-call parity
-- Examined moneyness impact on pricing
+### 1️⃣ **📈 Model Implementations**
 
-**American Options**
-- Compared pricing against European equivalents
-- Demonstrated early exercise premium
+#### ⚙️ **Heston Model (Stochastic Volatility)**
 
-**Exotic Options**
-- Priced European Up-and-In (UAI) call options
-- Valued European Down-and-In (DAI) put options
+* Applied to **at-the-money (ATM) European options**
+* Tested with correlation values: `ρ = -0.30` and `ρ = -0.70`
+* Calculated **Greeks**: delta, gamma
+* ✅ Verified **put-call parity**
+* Analyzed **moneyness effects** within `0.85–1.10` range
 
-### 2. Key Findings
+#### ⚙️ **Merton Model (Jump Diffusion)**
 
-**Pricing Comparisons**
-- Heston ATM options:
-  - ρ=-0.30: Call=2.87, Put=2.89
-  - ρ=-0.70: Call=2.07, Put=3.47
-- Merton options:
-  - λ=0.75: Call=8.32, Put=7.06
-  - λ=0.25: Call=6.80, Put=5.83
-- American options showed higher values due to early exercise feature
+* Priced European options with **jump intensities**: `λ = 0.25` and `λ = 0.75`
+* Computed **Greeks** and examined **price impact of jumps**
+* Verified **put-call parity**
+* Evaluated pricing across **different strike levels**
 
-**Greeks Analysis**
-- Heston model showed more sensitive gamma values to correlation changes
-- Merton model deltas varied significantly with jump intensity
-- Gamma values demonstrated different volatility characteristics between models
+#### 🧾 **American Options**
 
-**Moneyness Effects**
-- Both models showed expected price decay with increasing strike prices
-- Merton model produced higher option prices across all moneyness levels
-- Heston model showed steeper price decay for out-of-money options
+* Compared pricing with equivalent **European options**
+* Demonstrated the **early exercise premium**
 
-**Exotic Options**
-- European UAI call option priced at 0.2998
-- European DAI put option priced at 5.3857
-- Demonstrated barrier option pricing mechanics
+#### 💥 **Exotic Options**
 
-### 3. Technical Implementation
+* Priced **European Up-and-In (UAI) Call Options**
+* Valued **European Down-and-In (DAI) Put Options**
+* Highlighted **barrier dependency** in exotic pricing
 
-**Methodology**
-- Monte Carlo simulations (10,000 paths)
-- Stochastic volatility modeling (Heston)
-- Jump diffusion processes (Merton)
-- Barrier option path-dependent pricing
+---
 
-**Validation**
-- Put-call parity verification for both models
-- Convergence testing of Monte Carlo results
-- Comparative analysis across model types
+### 2️⃣ **🔍 Key Findings**
 
-**Numerical Results**
-- Confirmed put-call parity holds for both models
-- Demonstrated American option premium over European
-- Quantified moneyness effects on option pricing
+#### 💲 **Pricing Comparisons**
 
-## Repository Structure
+* **Heston Model (ATM Options)**
+
+  * ρ = -0.30: Call = `2.87`, Put = `2.89`
+  * ρ = -0.70: Call = `2.07`, Put = `3.47`
+* **Merton Model (Jump Diffusion)**
+
+  * λ = 0.75: Call = `8.32`, Put = `7.06`
+  * λ = 0.25: Call = `6.80`, Put = `5.83`
+* **American Options** were consistently priced **higher** due to early exercise capability
+
+#### 🧮 **Greeks Analysis**
+
+* **Gamma** in Heston model showed high sensitivity to changes in **correlation**
+* **Delta** in Merton model varied with **jump intensity**
+* Overall Greek behavior reflected distinct **volatility mechanics** across models
+
+#### ⚖️ **Moneyness Effects**
+
+* Both models showed **price decay** as strike price increases
+* Merton consistently yielded **higher option values** across moneyness
+* Heston had steeper decay in **out-of-the-money (OTM)** conditions
+
+#### 🚧 **Exotic Options**
+
+* European UAI Call = `0.2998`
+* European DAI Put = `5.3857`
+* Illustrated **path dependency** and **barrier activation mechanics**
+
+---
+
+### 3️⃣ **🛠️ Technical Implementation**
+
+#### **📊 Methodology**
+
+* **Monte Carlo Simulations** (10,000+ paths)
+* **Stochastic Volatility Modeling** (Heston)
+* **Jump Diffusion Processes** (Merton)
+* **Barrier Option Pricing** with path tracking
+
+#### **✅ Validation**
+
+* Put-call parity tested for both models
+* Monte Carlo convergence confirmed
+* Cross-model comparisons for robustness
+
+#### **📈 Numerical Results**
+
+* Confirmed **put-call parity** holds across pricing models
+* Quantified **early exercise premium** for American options
+* Measured **sensitivity to volatility, correlation, and jumps**
+
+---
+
+## 🗂️ Repository Structure
 
 ```
 /project
 │── /notebooks
-│   ├── heston_model.ipynb
-│   ├── merton_model.ipynb
-│   └── american_exotics.ipynb
+│   ├── heston_model.ipynb          # Heston pricing & Greeks
+│   ├── merton_model.ipynb          # Merton jump diffusion model
+│   └── american_exotics.ipynb      # American & barrier option pricing
 │── /data
-│   ├── parameters.json
-│   └── results.csv
+│   ├── parameters.json             # Model parameters
+│   └── results.csv                 # Output pricing data
 │── /docs
-│   └── methodology.pdf
+│   └── methodology.pdf             # Full documentation
 ├── README.md
 └── requirements.txt
 ```
 
-## Future Work
+---
 
-1. Extend to multi-asset options
-2. Implement control variates for variance reduction
-3. Add local volatility surfaces
-4. Develop real-time pricing dashboard
-5. Incorporate machine learning for parameter calibration
+## 🚀 Future Work
 
-This project provides a comprehensive framework for understanding advanced option pricing models and their practical implementation through Monte Carlo methods. The comparative analysis offers insights into model selection for different market conditions and option types.
+1. 📈 Extend models to **multi-asset options** (e.g., basket or rainbow options)
+2. 🧮 Implement **control variates** for better variance reduction in simulations
+3. 📉 Add **local volatility surfaces** for more realistic modeling
+4. 📊 Develop **real-time dashboard** for live option pricing and visualization
+5. 🤖 Incorporate **machine learning** for parameter calibration and volatility forecasting
+
+---
+
+## 🧠 Conclusion
+
+This project provides a **robust framework** for understanding and comparing **advanced option pricing models** using real-world assumptions. It not only captures the theoretical mechanics of Heston and Merton models but also translates them into **practical pricing insights** using Python and Monte Carlo methods.
+
+> 💡 Ideal for financial engineers, quantitative researchers, and practitioners aiming to deepen their understanding of modern derivatives pricing.
+
+---
+
+Let me know if you'd like me to export this into a `README.md` file or integrate charts/tables directly from your notebooks!
+
