@@ -2,7 +2,7 @@
 
 ## 📘 Project Overview
 
-This project presents a **comparative analysis of advanced option pricing models**, focusing on the **Heston Stochastic Volatility Model** and the **Merton Jump Diffusion Model**. Both **European and American options** are evaluated using **Monte Carlo simulations**. The work explores how different **market assumptions** (like correlation and jump intensity) impact pricing, Greeks, and moneyness behavior.
+This project presents a **comparative analysis of advanced option pricing models**, focusing on the **Heston Stochastic Volatility Model** and the **Merton Jump Diffusion Model**. Both **European and American options** are evaluated using **Monte Carlo simulations**. The work explores how different **market assumptions** (like correlation and jump intensity) impact pricing, Greeks, and moneyness behavior. This project provides a **robust framework** for understanding and comparing **advanced option pricing models** using real-world assumptions. It not only captures the theoretical mechanics of Heston and Merton models but also translates them into **practical pricing insights** using Python and Monte Carlo methods.
 
 > 📚 Completed as part of a financial modeling curriculum. Designed for research, academic exploration, and practical implementation.
 
@@ -123,9 +123,6 @@ This project presents a **comparative analysis of advanced option pricing models
 5. 🤖 Incorporate **machine learning** for parameter calibration and volatility forecasting
 
 
-## 🧠 Conclusion
-
-This project provides a **robust framework** for understanding and comparing **advanced option pricing models** using real-world assumptions. It not only captures the theoretical mechanics of Heston and Merton models but also translates them into **practical pricing insights** using Python and Monte Carlo methods.
 
 
 
